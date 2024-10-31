@@ -1,0 +1,7 @@
+--extra-index-url https://pypi.nvidia.com
+tensorflow[and-cuda]==2.15
+tf-keras==2.15
+deepface==0.0.93
+streamlit==1.39.0
+python-ffmpeg==2.0.12
+seaborn==0.13.2
