@@ -22,13 +22,13 @@
 <details>
 <summary>Скриншот страницы детекции видео</summary>
 
-![Старница детекции](./screenshots/main_video.png)
+![Страница детекции](./screenshots/main_video.png)
 </details>
 
 <details>
 <summary>Скриншот страницы отображения графиков результатов детекции видео</summary>
 
-![Сраница результатов](./screenshots/main_video_analyze.png)
+![Страница результатов](./screenshots/main_video_analyze.png)
 </details>
 
 
