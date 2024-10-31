@@ -74,7 +74,7 @@
 
 ```
 git clone https://github.com/sergey21000/face-detector-deepface.git
-cd chatbot-rag
+cd face-detector-deepface
 ```
 
 **2) Создание и активация виртуального окружения (опционально)**
