@@ -1,4 +1,5 @@
 
+
 ---
 # Face, Emotion, Gender, Age, Race Detection with DeepFace and Streamlit
 
@@ -86,20 +87,21 @@ source env/bin/activate
 
 **3) Установка зависимостей**  
 
-*С поддержкой CPU*
-```
-pip install -r requirements-cpu.txt
-```
+- *С поддержкой CPU*
+  ```
+  pip install -r requirements-cpu.txt
+  ```
 
-*С поддержкой CUDA*
-```
-pip install -r requirements.txt
-```
+- *С поддержкой CUDA*
+  ```
+  pip install -r requirements.txt
+  ```
 
 **4) Запуск сервера Streamlit**  
 ```
 streamlit run Image_Detection.py
 ```
+
 После запуска сервера перейти в браузере по адресу http://localhost:8501/  
 
 
@@ -137,15 +139,16 @@ docker build -t face-detector -f Dockerfile .
 
 Запуск контейнера
 
-*С поддержкой CPU*
-```
-docker run -it -p 8501:8501 -v ./models:/app/models face-detector
-```
+ - *С поддержкой CPU*
+  ```
+  docker run -it -p 8501:8501 -v ./models:/app/models face-detector
+  ```
 
-*С поддержкой CUDA*
-```
-docker run -it --gpus all -p 8501:8501 -v ./models:/app/models face-detector
-```
+- *С поддержкой CUDA*
+  ```
+  docker run -it --gpus all -p 8501:8501 -v ./models:/app/models face-detector
+  ```
+
 После запуска сервера перейти в браузере по адресу http://localhost:8501/  
 
 ---
