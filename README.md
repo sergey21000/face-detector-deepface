@@ -12,7 +12,7 @@
 
 Детектор эмоций, пола, возраста и расы на фото и видео на основе библиотеки DeepFace и с веб-интрефейсом на Streamlit 
 
-В Google Colab <a href="https://colab.research.google.com/github/sergey21000/face-detector-deepface/blob/main/DeepFace_Age_Gender_Emotion_Recognition.ipynb"><img src="https://img.shields.io/static/v1?message=Open%20in%20Colab&logo=googlecolab&labelColor=5c5c5c&color=0f80c1&label=%20" alt="Open in Colab"></a> ноутбуке находится код демонстрации возможностей библиотеки DeepFace, демонстрация функционала приложения и отрисовка графиков результатов детекции видео
+В Google Colab <a href="https://colab.research.google.com/drive/1O32NIhtsJBlR8Y6sp2xOPDOic8xtSnHa"><img src="https://img.shields.io/static/v1?message=Open%20in%20Colab&logo=googlecolab&labelColor=5c5c5c&color=0f80c1&label=%20" alt="Open in Colab"></a> ноутбуке находится код демонстрации возможностей библиотеки DeepFace, демонстрация функционала приложения и отрисовка графиков результатов детекции видео
 
 <details>
 <summary>Скриншот страницы детекции изображений</summary>
