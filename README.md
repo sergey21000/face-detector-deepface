@@ -73,14 +73,14 @@
 
 **1) Клонирование репозитория**  
 
-```
+```sh
 git clone https://github.com/sergey21000/face-detector-deepface.git
 cd face-detector-deepface
 ```
 
 **2) Создание и активация виртуального окружения (опционально)**
 
-```
+```sh
 python3 -m venv env
 source env/bin/activate
 ```
@@ -88,17 +88,17 @@ source env/bin/activate
 **3) Установка зависимостей**  
 
 - *С поддержкой CPU*
-  ```
+  ```sh
   pip install -r requirements-cpu.txt
   ```
 
 - *С поддержкой CUDA*
-  ```
+  ```sh
   pip install -r requirements.txt
   ```
 
 **4) Запуск сервера Streamlit**  
-```
+```sh
 streamlit run Image_Detection.py
 ```
 
@@ -114,7 +114,7 @@ streamlit run Image_Detection.py
 ### 🏃‍ Запуск контейнера из образа Docker HUB
 
 *С поддержкой CPU и CUDA*
-```
+```sh
 docker run -it -p 8501:8501 -v ./models:/app/models sergey21000/face-detector-deepface
 ```
 
@@ -125,7 +125,7 @@ docker run -it -p 8501:8501 -v ./models:/app/models sergey21000/face-detector-de
 
 **1) Клонирование репозитория**  
 
-```
+```sh
 git clone https://github.com/sergey21000/face-detector-deepface.git
 cd face-detector-deepface
 ```
@@ -133,19 +133,19 @@ cd face-detector-deepface
 **2) Сборка образа и запуск контейнера**
 
 Сборка образа
-```
+```sh
 docker build -t face-detector -f Dockerfile .
 ```
 
 Запуск контейнера
 
  - *С поддержкой CPU*
-  ```
+  ```sh
   docker run -it -p 8501:8501 -v ./models:/app/models face-detector
   ```
 
 - *С поддержкой CUDA*
-  ```
+  ```sh
   docker run -it --gpus all -p 8501:8501 -v ./models:/app/models face-detector
   ```
 
