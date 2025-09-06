@@ -3,11 +3,11 @@
 ---
 # Face, Emotion, Gender, Age, Race Detection with DeepFace and Streamlit
 
-<div align="center">
+<div align="left">
 
 <a href="https://huggingface.co/spaces/sergey21000/face-detector-deepface"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-yellow" alt="Hugging Face Spaces"></a>
-<a href="https://hub.docker.com/r/sergey21000/face-detector-deepface"><img src="https://img.shields.io/badge/Docker-Hub-blue?logo=docker" alt="Docker Hub "></a>
 </div>
+
 
 
 Детектор эмоций, пола, возраста и расы на фото и видео на основе библиотеки DeepFace и с веб-интрефейсом на Streamlit 
@@ -165,3 +165,4 @@ docker run -it -p 8501:8501 -v ./models:/app/models face-detector:cpu
 ## Лицензия
 
 Этот проект лицензирован на условиях лицензии [MIT](./LICENSE).
+
