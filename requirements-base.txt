@@ -1,0 +1,4 @@
+deepface==0.0.95
+streamlit==1.49.1
+python-ffmpeg==2.0.12
+seaborn==0.13.2

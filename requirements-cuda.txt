@@ -1,0 +1,4 @@
+--extra-index-url https://pypi.nvidia.com
+tensorflow[and-cuda]==2.20.0
+tf-keras==2.20.1
+-r requirements-base.txt
