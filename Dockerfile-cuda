@@ -1,5 +1,5 @@
-FROM tensorflow/tensorflow:2.18.0-gpu
-RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg \
+FROM tensorflow/tensorflow:2.20.0-gpu
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg libcudnn9-cuda-12 \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
 WORKDIR /app
 COPY requirements-base.txt .
