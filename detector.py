@@ -108,7 +108,7 @@ class Detector:
         self.save_video_path = 'result_video.mp4'
         self.result_csv_path = 'video_annotations.csv'
         # opencv, yunet, centerface, dlib, ssd, fastmtcnn
-        self.detector_backend = 'ssd'
+        self.detector_backend = 'opencv'
         weights_dir = MODELS_DIR / '.deepface' / 'weights'
         self.is_first_run = True
 
@@ -261,3 +261,4 @@ class Detector:
         ffmpeg.execute()
 
 detector_model = Detector()
+
