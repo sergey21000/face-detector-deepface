@@ -128,11 +128,16 @@ class Detector:
             align=False,
             enforce_detection=False,
             silent=True,
-            )
+        )
 
 
     # детекция одного изображения, возаращает список со словарями результатов детекций
-    def detect_image(self, image: str | np.ndarray, actions: list[str], align: bool) -> list[DetectResult]:
+    def detect_image(
+            self,
+            image: str | np.ndarray,
+            actions: list[str],
+            align: bool,
+    ) -> list[DetectResult]:
         detection_dicts = DeepFace.analyze(
             img_path=image,
             actions=actions,
@@ -140,7 +145,7 @@ class Detector:
             align=align,
             enforce_detection=False,
             silent=True,
-            )
+        )
         detections = [DetectResult.from_dict(detection) for detection in detection_dicts]
         return detections
 
@@ -151,7 +156,7 @@ class Detector:
             np_image_rgb: np.ndarray,
             detections: list[DetectResult],
             face_conf_threshold: float,
-            ) -> np.ndarray:
+    ) -> np.ndarray:
         pil_image = Image.fromarray(np_image_rgb)
         draw = ImageDraw.Draw(pil_image)
         font_size = pil_image.size[1] // self.font_scale
@@ -179,7 +184,7 @@ class Detector:
             actions: list[str],
             align: bool,
             face_conf_threshold: float,
-            ) -> Generator[tuple[int, int], None, None]:
+    ) -> Generator[tuple[int, int], None, None]:
 
         cap_read = cv2.VideoCapture(str(video_file))
         frames_width = int(cap_read.get(cv2.CAP_PROP_FRAME_WIDTH))
@@ -192,7 +197,7 @@ class Detector:
             fourcc=cv2.VideoWriter_fourcc(*'mp4v'),
             fps=frames_fps,
             frameSize=(frames_width, frames_height),
-            )
+        )
 
         self.detections_all_frames = []
         frames_count = 0
@@ -205,7 +210,7 @@ class Detector:
                 image=np_image_bgr,
                 actions=actions,
                 align=align,
-                )
+            )
             self.detections_all_frames.append(detections)
 
             if detections[0].face_conf is not None:
@@ -260,5 +265,5 @@ class Detector:
         ffmpeg = FFmpeg().option('y').input(input_video_path).output(output_video_path)
         ffmpeg.execute()
 
-detector_model = Detector()
 
+detector_model = Detector()
