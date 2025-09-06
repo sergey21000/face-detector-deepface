@@ -139,7 +139,7 @@ docker build -t face-detector -f Dockerfile .
 
 Запуск контейнера
 
- - *С поддержкой CPU*
+- *С поддержкой CPU*
   ```sh
   docker run -it -p 8501:8501 -v ./models:/app/models face-detector
   ```
@@ -159,3 +159,4 @@ docker build -t face-detector -f Dockerfile .
 ## Лицензия
 
 Этот проект лицензирован на условиях лицензии [MIT](./LICENSE).
+
