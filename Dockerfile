@@ -3,7 +3,7 @@ RUN apt-get update && apt-get install -y ffmpeg
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir --ignore-installed blinker==1.8.2
-RUN pip install --no-cache-dir $(grep -ivE "tensorflow|tf-keras|--extra-index-url" requirements.txt)
+RUN pip install --no-cache-dir $(grep -v -E '^--extra-index-url|^tensorflow|^tf-keras' requirements.txt | tr -d '\r')
 COPY media/ ./media/
 COPY fonts/ ./fonts/
 COPY pages/ ./pages/
