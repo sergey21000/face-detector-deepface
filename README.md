@@ -123,7 +123,7 @@ docker run -it \
 
 *С поддержкой CUDA*
 ```sh
-docker run -it \
+docker run -it --gpus all \
 	-p 8501:8501 \
 	-v ./models:/app/models \
 	ghcr.io/sergey21000/face-detector-deepface:main-cuda
@@ -165,5 +165,6 @@ docker run -it -p 8501:8501 -v ./models:/app/models face-detector:cpu
 ## Лицензия
 
 Этот проект лицензирован на условиях лицензии [MIT](./LICENSE).
+
 
 
