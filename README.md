@@ -120,7 +120,7 @@ docker run -it \
 	ghcr.io/sergey21000/face-detector-deepface:main-cpu
 ```
 
-*С поддержкой CUDA*
+*С поддержкой CUDA (только compute capability < 12 - Blackwell не поддерживается)*
 ```sh
 docker run -it --gpus all \
 	-p 8501:8501 \
